@@ -7,7 +7,7 @@
  * vimeoIdFromUrl($url)
  */
  
-class ToolsClass {
+class Tools_Class {
 	
     
     /**
