@@ -1,8 +1,10 @@
-artmisc
+Miscellaneous methods
 =======
-
 PHP class with tools method / miscellaneous
+vimeo youtube url to id ex: http://youtu.be/Y8N4tIqy4uw -> Y8N4tIqy4uw
 
+* * *
+* * *
 
 current methods (2):
 
@@ -24,7 +26,10 @@ current methods (2):
     *
     * @return string id numeric for vimeo, alphadecimal for youtube
     */
-
+```php
+    $youtube_vimeo_id = Tools_Class::vitubeIdFromUrl($video_url);
+```
+---
 #### ytIdFromUrl($video_url)
     
     /**
@@ -40,8 +45,9 @@ current methods (2):
     *
     * @return string id alphadecimal for youtube ex: "kuNn1wuzC0U"
     */
-    $youtube_id = ytIdFromUrl($video_url);
-
+```php
+    $youtube_id = Tools_Class::ytIdFromUrl($video_url);
+```
 #### vimeoIdFromUrl($video_url)
     
     /**
@@ -55,4 +61,6 @@ current methods (2):
     * 
     * @return string numeric for vimeo ex: "59802973"
     */
-    $vimeo_id = vimeoIdFromUrl($video_url);
+```php
+    $vimeo_id = Tools_Class::vimeoIdFromUrl($video_url);
+```
