@@ -6,8 +6,8 @@ PHP class with tools method / miscellaneous
 
 current methods (2):
 
-vitubeIdFromUrl($video_url)
-=======
+#### vitubeIdFromUrl($video_url)
+
     /**
     * Extract and return a id video token from passed YouTube or Vimeo URL
     *
@@ -25,8 +25,7 @@ vitubeIdFromUrl($video_url)
     * @return string id numeric for vimeo, alphadecimal for youtube
     */
 
-ytIdFromUrl($video_url)
-=======
+#### ytIdFromUrl($video_url)
     
     /**
     * YouTube - Cut and extract a video id token from passed URL
@@ -43,8 +42,7 @@ ytIdFromUrl($video_url)
     */
     $youtube_id = ytIdFromUrl($video_url);
 
-vimeoIdFromUrl($video_url)
-=======
+#### vimeoIdFromUrl($video_url)
     
     /**
     * Cut and extract a video id token from passed Vimeo URL
