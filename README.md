@@ -29,7 +29,9 @@ current methods (2):
 ```php
     $youtube_vimeo_id = Tools_Class::vitubeIdFromUrl($video_url);
 ```
+
 ---
+
 #### ytIdFromUrl($video_url)
     
     /**
@@ -48,6 +50,9 @@ current methods (2):
 ```php
     $youtube_id = Tools_Class::ytIdFromUrl($video_url);
 ```
+
+---
+
 #### vimeoIdFromUrl($video_url)
     
     /**
@@ -64,3 +69,5 @@ current methods (2):
 ```php
     $vimeo_id = Tools_Class::vimeoIdFromUrl($video_url);
 ```
+
+---
