@@ -1,12 +1,18 @@
-<?php namespace App\Model\Traits;
+<?php //namespace Traits; // put your namespace here
 
-use Cake\Log\Log;
-use Cake\ORM\TableRegistry;
-use Cake\Mailer\Email;
-use Cake\Core\Configure;
-use Cake\Routing\Router;
-
-trait DboTrait
+/**
+ * @author Artur Mamedov <arturmamedov1993@gmail.com> MIT License
+ *
+ * TextTrait - Utility for work with string
+ *  - removeBindings() // for remove and get clean text of wordpress [shortcode] for example or other binding things
+ *  - escapeUrl() // replace special chars in url for get a valid and seo firendly version (ex: & => and)
+ *  - replaceSymbol() // replace special symbols with equivalent (ex: è => e)
+ *  - removeSymbol() // remove special symbol from string (ex: è => '')
+ *  - convertUrlsToLinks() // convert string urls http://example.com or www.example.com to HTML a tag link <a href="www.example" 
+ *  - addTargetBlankToLinks() // add target="_blank" to HTML a tag links
+ *
+ */
+trait TextTrait
 {
 
     /**
@@ -85,7 +91,7 @@ trait DboTrait
      *
      * @return string
      */
-    public function cleanSymbol($string)
+    public function replaceSymbol($string)
     {
         $string = str_replace("è", "e", $string);
         $string = str_replace("à", "a", $string);
@@ -127,7 +133,7 @@ trait DboTrait
      *
      * @return string The converte string
      */
-    public function convertTextToLink($text, $target_blank = false)
+    public function convertUrlsToLinks($text, $target_blank = false)
     {
         ///* Url link
         if ($target_blank) {
@@ -153,7 +159,7 @@ trait DboTrait
      *
      * @return string The converte string
      */
-    public function convertAtagTotblank($html)
+    public function addTargetBlankToLinks($html)
     {
         $html = preg_replace("/<a href=(\"|\')(http:\/\/|https:\/\/)(.*?)(\"|\')>/",
             "<a href=\"http://$3\" target=\"_blank\">", $html);
